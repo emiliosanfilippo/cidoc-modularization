@@ -9,7 +9,9 @@
     <owl:Ontology rdf:about="http://erlangen-crm.org/physical-thing">
         <owl:imports rdf:resource="http://erlangen-crm.org/persistent-item-top"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/place"/>
-        <rdfs:comment xml:lang="en">Physical thing module extracted from CIDOC CRM Erlangen version (v.6.2.1)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module about physical things</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen version (v.6.2.1)</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
     
 
