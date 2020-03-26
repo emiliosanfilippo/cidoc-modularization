@@ -8,7 +8,7 @@ Stay tuned for updates.
 
 
 
-## Overview on the library
+## Repository overview
 
 * cidoc-whole.owl: it imports all ontology modules, i.e., it builds the entire ontology. When using RDF triplestores, this module should be always imported for first, since it guarantees the inter-connection and interoperability across the various modules and their data.  
 
