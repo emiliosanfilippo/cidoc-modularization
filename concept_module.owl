@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://erlangen-crm.org/conceptual-object#"
+     xml:base="http://erlangen-crm.org/conceptual-object"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://erlangen-crm.org/conceptual-object"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/conceptual-object#SocialRole -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/conceptual-object#SocialRole">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E28_Conceptual_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E28_Conceptual_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/persistent-item#NonPhysicalManMadeThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E29_Design_or_Procedure -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E29_Design_or_Procedure">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E30_Right -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E30_Right">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E31_Document -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E31_Document">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E32_Authority_Document -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E32_Authority_Document">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E33_Linguistic_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E33_Linguistic_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E34_Inscription -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E34_Inscription">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E35_Title -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E35_Title">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E36_Visual_Item -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E36_Visual_Item">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E37_Mark -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E37_Mark">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E38_Image -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E38_Image">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E41_Appellation -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E41_Appellation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:comment>subclasses of E41 Appellation to be added</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E55_Type -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E55_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E56_Language -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E56_Language">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E57_Material -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E57_Material">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E58_Measurement_Unit -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E58_Measurement_Unit">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E71_Man-Made_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E73_Information_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E73_Information_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E89_Propositional_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E89_Propositional_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E90_Symbolic_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E90_Symbolic_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/persistent-item#NonPhysicalManMadeThing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/persistent-item#NonPhysicalManMadeThing">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

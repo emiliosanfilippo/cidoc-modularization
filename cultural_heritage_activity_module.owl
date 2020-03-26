@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://erlangen-crm.org/ch-activity#"
+     xml:base="http://erlangen-crm.org/ch-activity"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://erlangen-crm.org/ch-activity">
+        <owl:imports rdf:resource="http://erlangen-crm.org/actor"/>
+        <owl:imports rdf:resource="http://erlangen-crm.org/temporal-top"/>
+        <rdfs:comment xml:lang="en">Because the module involves the representation of actors for cultural heritage activities, the Actor module is directly imported.
+
+It also imports the Temporal Activities module.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This module is extracted from CIDOC CRM Erlangen (v.6.2.1)</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P11_had_participant -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P11_had_participant">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12_occurred_in_the_presence_of"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P11i_participated_in -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P11i_participated_in">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P147_curated -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P147_curated">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P147i_was_curated_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E87_Curation_Activity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E78_Collection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P147i_was_curated_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P147i_was_curated_by"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14_carried_out_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P14i_performed -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14i_performed">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P22_transferred_title_to -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P22_transferred_title_to">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P22i_acquired_title_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P22i_acquired_title_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P22i_acquired_title_through">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P23_transferred_title_from -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P23_transferred_title_from">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P23i_surrendered_title_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P23i_surrendered_title_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P23i_surrendered_title_through">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P24_transferred_title_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P24_transferred_title_of">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P24i_changed_ownership_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P24i_changed_ownership_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P24i_changed_ownership_through"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P28_custody_surrendered_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P28_custody_surrendered_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P28i_surrendered_custody_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P28i_surrendered_custody_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P28i_surrendered_custody_through">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P29_custody_received_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P29_custody_received_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P29i_received_custody_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P29i_received_custody_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P29i_received_custody_through">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P30_transferred_custody_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P30_transferred_custody_of">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P30i_custody_transferred_through"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P30i_custody_transferred_through -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P30i_custody_transferred_through"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/E10_Transfer_of_Custody -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E10_Transfer_of_Custody">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P30_transferred_custody_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E78_Collection -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E78_Collection">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E87_Curation_Activity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E87_Curation_Activity">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P147_curated"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E78_Collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E8_Acquisition -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E8_Acquisition">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P24_transferred_title_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://erlangen-crm.org/temporal-top#"
+     xml:base="http://erlangen-crm.org/temporal-top"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://erlangen-crm.org/temporal-top">
+        <owl:imports rdf:resource="http://erlangen-crm.org/persistent-item-top"/>
+        <owl:imports rdf:resource="http://erlangen-crm.org/place"/>
+        <rdfs:comment xml:lang="en">Temporal entities module extracted from CIDOC CRM Erlangen v6.2.1</rdfs:comment>
+        <rdfs:comment xml:lang="en">This module imports the modules Persistent Item Top and Place. When modeling temporal entities, indeed, one is often interested in representing the persistent items participating in the temporal entities, as well as the places where the temporal entities take place</rdfs:comment>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://erlangen-crm.org/current/P114_is_equal_in_time_to -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P114_is_equal_in_time_to">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P115_finishes -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P115_finishes">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P115i_is_finished_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P115i_is_finished_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P115i_is_finished_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P116_starts -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P116_starts">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P116i_is_started_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P116i_is_started_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P116i_is_started_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P117_occurs_during -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P117_occurs_during">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P117i_includes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P117i_includes -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P117i_includes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P118_overlaps_in_time_with -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P118_overlaps_in_time_with">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P119_meets_in_time_with -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P119_meets_in_time_with">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P119i_is_met_in_time_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P119i_is_met_in_time_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P119i_is_met_in_time_by"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P120_occurs_before -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P120_occurs_before">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P120i_occurs_after"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P120i_occurs_after -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P120i_occurs_after">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P12_occurred_in_the_presence_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P12_occurred_in_the_presence_of">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P12i_was_present_at -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P12i_was_present_at"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P134_continued -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P134_continued">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P134i_was_continued_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P134i_was_continued_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P134i_was_continued_by"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P19_was_intended_use_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P19_was_intended_use_of">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P19i_was_made_for"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P19i_was_made_for -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P19i_was_made_for"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P20_had_specific_purpose -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P20_had_specific_purpose">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P20i_was_purpose_of"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P20i_was_purpose_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P20i_was_purpose_of"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P44_has_condition -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P44_has_condition">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P44i_is_condition_of"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P44i_is_condition_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P44i_is_condition_of">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E3_Condition_State"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P4_has_time-span -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4_has_time-span">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P4i_is_time-span_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P7_took_place_at -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P7_took_place_at">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P7i_witnessed"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <rdfs:comment xml:lang="en">The domain restriction of this object property has been generalized to E2 Temporal Entity</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P7i_witnessed -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P7i_witnessed"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P86_falls_within -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P86_falls_within">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P92_brought_into_existence -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P92_brought_into_existence">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E63_Beginning_of_Existence"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P92i_was_brought_into_existence_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/P93_took_out_of_existence -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P93_took_out_of_existence">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E64_End_of_Existence"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
+
+
+
+    <!-- http://erlangen-crm.org/temporal-top#has_temporal_part -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/temporal-top#has_temporal_part">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/temporal-top#is_temporal_part_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:comment xml:lang="en">This relation substitutes P9_consists_of and P5_consists_of. It is the most general relation to represent parthood relation between temporal entities</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/temporal-top#is_temporal_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/temporal-top#is_temporal_part_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/temporal-top#took_place_on -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/temporal-top#took_place_on">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <rdfs:comment xml:lang="en">Replaces P8_took_place_on_or_within</rdfs:comment>
+        <rdfs:comment xml:lang="en">inverse relation to be introduced</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/temporal-top#took_place_within -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/temporal-top#took_place_within">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <rdfs:comment xml:lang="en">Replaces P8_took_place_on_or_within</rdfs:comment>
+        <rdfs:comment xml:lang="en">inverse relation to be introduced</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://erlangen-crm.org/current/E2_Temporal_Entity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E2_Temporal_Entity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E3_Condition_State -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E3_Condition_State">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P44i_is_condition_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E4_Period -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E4_Period">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E52_Time-Span -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E52_Time-Span">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E53_Place -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place">
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </rdf:Description>
+
+
+
+    <!-- http://erlangen-crm.org/current/E5_Event -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E5_Event">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P12_occurred_in_the_presence_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Subclasses of E5 Event are not declared as disjoint because they have common subclasses; e.g., E81 Transformation is both a begining of existence and an end of existence</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E63_Beginning_of_Existence -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E63_Beginning_of_Existence">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P92_brought_into_existence"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E64_End_of_Existence -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E64_End_of_Existence">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P93_took_out_of_existence"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://erlangen-crm.org/current/E77_Persistent_Item -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+
+
+
+    <!-- http://erlangen-crm.org/current/E7_Activity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E7_Activity">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E3_Condition_State"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E4_Period"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E5_Event"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

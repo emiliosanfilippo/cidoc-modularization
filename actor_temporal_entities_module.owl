@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://erlangen-crm.org/actor_activities#"
+     xml:base="http://erlangen-crm.org/actor_activities"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://erlangen-crm.org/actor_activity">
+        <owl:imports rdf:resource="http://erlangen-crm.org/actor"/>
+        <owl:imports rdf:resource="http://erlangen-crm.org/temporal-top"/>
+        <rdfs:comment xml:lang="en">The Actor Activity module is extracted from CIDOC CRM Erlangen (v.6.2.1)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The purpose of this module is to describe temporal events involving agents in the sense of birth or death events, as well as events concerning the creation or dissolution of groups. 
+
+The module imports the Actor module and the Temporal Entity module, as well as all indirect modules related to the latter ones.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P100_was_death_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P100_was_death_of">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93_took_out_of_existence"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P100i_died_in"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E69_Death"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P100i_died_in -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P100i_died_in">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P11_had_participant -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P11_had_participant">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12_occurred_in_the_presence_of"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P11i_participated_in -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P11i_participated_in">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P143_joined -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P143_joined">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P143i_was_joined_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P143i_was_joined_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P143i_was_joined_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P144_joined_with -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P144_joined_with">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P144i_gained_member_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P144i_gained_member_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P144i_gained_member_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P145_separated -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P145_separated">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P145i_left_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E86_Leaving"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P145i_left_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P145i_left_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P146_separated_from -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P146_separated_from">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P146i_lost_member_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E86_Leaving"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P146i_lost_member_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P146i_lost_member_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14_carried_out_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P14i_performed -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14i_performed">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P151_was_formed_from -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P151_was_formed_from">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P151i_participated_in"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P151i_participated_in -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P151i_participated_in">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P95_has_formed -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P95_has_formed">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92_brought_into_existence"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P95i_was_formed_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P95i_was_formed_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P95i_was_formed_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P96_by_mother -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P96_by_mother">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P96i_gave_birth"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P96i_gave_birth -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P96i_gave_birth">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P97_from_father -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P97_from_father">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P97i_was_father_for"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P97i_was_father_for -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P97i_was_father_for"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P98_brought_into_life -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P98_brought_into_life">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92_brought_into_existence"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P98i_was_born"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P98i_was_born -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P98i_was_born">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P99_dissolved -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P99_dissolved">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93_took_out_of_existence"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P99i_was_dissolved_by"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E68_Dissolution"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P99i_was_dissolved_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P99i_was_dissolved_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/E21_Person -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P98i_was_born"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E66_Formation -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E66_Formation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E63_Beginning_of_Existence"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P95_has_formed"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E67_Birth -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E67_Birth">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E63_Beginning_of_Existence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P96_by_mother"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P97_from_father"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E68_Dissolution -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E68_Dissolution">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E64_End_of_Existence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P99_dissolved"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E69_Death -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E69_Death">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E64_End_of_Existence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P100_was_death_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E74_Group -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E74_Group">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P144i_gained_member_by"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P95i_was_formed_by"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E7_Activity -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E7_Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E85_Joining -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E85_Joining">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P143_joined"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P144_joined_with"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E86_Leaving -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E86_Leaving">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P145_separated"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P146_separated_from"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E66_Formation"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E67_Birth"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E85_Joining"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E68_Dissolution"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E69_Death"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/current/E86_Leaving"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
