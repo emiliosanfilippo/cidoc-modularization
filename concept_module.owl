@@ -6,7 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://erlangen-crm.org/conceptual-object"/>
+    <owl:Ontology rdf:about="http://erlangen-crm.org/conceptual-object">
+        <rdfs:comment xml:lang="en">Module about conceptual objects</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC-CRM Erlangen release (v.6.2.1)</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
+    </owl:Ontology>
     
 
 
