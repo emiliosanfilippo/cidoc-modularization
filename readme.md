@@ -10,11 +10,11 @@ Stay tuned for updates.
 
 ## Repository overview
 
-* cidoc-whole.owl: it imports all ontology modules, i.e., it builds the entire ontology. When using RDF triplestores, this module should be always imported for first, since it guarantees the inter-connection and interoperability across the various modules and their data.  
+* **cidoc-whole.owl**: it imports all ontology modules, i.e., it builds the entire ontology. When using RDF triplestores, this module should be always imported for first, since it guarantees the inter-connection and interoperability across the various modules and their data.  
 
-* temporal-whole-module.owl: it imports all ontology modules about temporal entities.
+* **temporal-whole-module.owl**: it imports all ontology modules about temporal entities.
 
-* persistent-whole-module.owl: it imports all ontology modules about persistent items.
+* **persistent-whole-module.owl**: it imports all ontology modules about persistent items.
 
 ## Remarks:
-* When using Protégé, if direct or indirect imports fail, it is sufficient to import manually the modules.
+* When using **Protégé**, if direct or indirect imports fail, it is sufficient to import manually the (not-imported) modules.
