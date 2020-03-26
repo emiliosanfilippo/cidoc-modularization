@@ -16,6 +16,7 @@
         <owl:imports rdf:resource="http://erlangen-crm.org/temporal-top"/>
         <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen release (v.6.2.1)</rdfs:comment>
         <rdfs:comment xml:lang="en">This module imports all modules about temporal entities</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
 </rdf:RDF>
 

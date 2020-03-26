@@ -6,7 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://erlangen-crm.org/upper"/>
+    <owl:Ontology rdf:about="http://erlangen-crm.org/upper">
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen release (v.6.2.1)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This module represent the most general classes of CIDOC-CRM. It is used to allow the consistent integration of the various modules. Therefore, apart from subclasses and disjointess axioms, it does not cover any relation between the represented classes.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
+    </owl:Ontology>
     
 
 
@@ -71,6 +75,7 @@
 
     <owl:Class rdf:about="http://erlangen-crm.org/upper#QualitySpace">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">This is a new classes hereby introduced for improving the representation of dimensions. See the Dimension module</rdfs:comment>
     </owl:Class>
     
 

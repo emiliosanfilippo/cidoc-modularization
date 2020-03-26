@@ -10,11 +10,12 @@
      xmlns:dimension="http://erlangen-crm.org/dimension#">
     <owl:Ontology rdf:about="http://erlangen-crm.org/dimension">
         <rdfs:comment>Dimension module extracted from CIDOC CRM Erlangen version 6.2.1</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -22,7 +23,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://erlangen-crm.org/current/P43_has_dimension -->
@@ -32,13 +33,13 @@
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/P43i_is_dimension_of -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P43i_is_dimension_of"/>
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#hasQualitativeValue -->
@@ -47,10 +48,10 @@
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/upper#QualitySpace"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -58,7 +59,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#hasQuantitativeValue -->
@@ -70,10 +71,10 @@ For example, hasLengthInCm, hasDiameterInMeter, etc.
 
 This approach replaces the use of E58_Measurement_Unit</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -81,7 +82,7 @@ This approach replaces the use of E58_Measurement_Unit</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E54_Dimension -->
@@ -95,13 +96,13 @@ This approach replaces the use of E58_Measurement_Unit</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">In the original version of CIDOC, dimensions characterizes things. Since the class E70 Thing has been now removed, dimensions are attached to persistent items. This also allows to model the dimensions of actors.</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E77_Persistent_Item -->
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E77_Persistent_Item"/>
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#RGBColorSpace -->
@@ -110,7 +111,7 @@ This approach replaces the use of E58_Measurement_Unit</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/upper#QualitySpace"/>
         <rdfs:comment xml:lang="en">This class is added only for sake of the example</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://erlangen-crm.org/upper#QualitySpace -->
@@ -118,13 +119,13 @@ This approach replaces the use of E58_Measurement_Unit</rdfs:comment>
     <owl:Class rdf:about="http://erlangen-crm.org/upper#QualitySpace">
         <rdfs:comment xml:lang="en">Quality space should be specialized in order to capture specific quality spaces. For example, the RGBColorSpace can be used to capture colors according to the RGB quality space.
 
-For examples based on a similar approach, the reader can refer to 
+For examples based on a similar approach, the reader can refer to
 https://nemo-ufes.github.io/gufo/</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -132,7 +133,7 @@ https://nemo-ufes.github.io/gufo/</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#red -->
@@ -141,7 +142,7 @@ https://nemo-ufes.github.io/gufo/</rdfs:comment>
         <rdf:type rdf:resource="http://erlangen-crm.org/dimension#RGBColorSpace"/>
         <rdfs:comment>this individual is added only for the sake of the example</rdfs:comment>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#t-shirt_id1 -->
@@ -150,7 +151,7 @@ https://nemo-ufes.github.io/gufo/</rdfs:comment>
         <current:P43_has_dimension rdf:resource="http://erlangen-crm.org/dimension#tshirt_id1-color"/>
         <rdfs:comment>this individual is added only for the sake of the example</rdfs:comment>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://erlangen-crm.org/dimension#tshirt_id1-color -->
@@ -159,10 +160,10 @@ https://nemo-ufes.github.io/gufo/</rdfs:comment>
         <hasQualitativeValue rdf:resource="http://erlangen-crm.org/dimension#red"/>
         <rdfs:comment>this individual is added only for the sake of the example</rdfs:comment>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -183,4 +184,3 @@ https://nemo-ufes.github.io/gufo/</rdfs:comment>
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

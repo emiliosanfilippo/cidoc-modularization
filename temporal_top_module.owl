@@ -9,8 +9,9 @@
     <owl:Ontology rdf:about="http://erlangen-crm.org/temporal-top">
         <owl:imports rdf:resource="http://erlangen-crm.org/persistent-item-top"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/place"/>
-        <rdfs:comment xml:lang="en">Temporal entities module extracted from CIDOC CRM Erlangen v6.2.1</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen v6.2.1</rdfs:comment>
         <rdfs:comment xml:lang="en">This module imports the modules Persistent Item Top and Place. When modeling temporal entities, indeed, one is often interested in representing the persistent items participating in the temporal entities, as well as the places where the temporal entities take place</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
 
 
