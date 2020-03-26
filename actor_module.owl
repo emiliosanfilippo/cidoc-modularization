@@ -8,7 +8,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://erlangen-crm.org/actor">
         <owl:imports rdf:resource="http://erlangen-crm.org/physical-thing"/>
-        <rdfs:comment xml:lang="en">Actor module extracted from CIDOC CRM Erlangen version 6.2.1</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module about actors (e.g., person, groups)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen  (v.6.2.1)</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
     
 

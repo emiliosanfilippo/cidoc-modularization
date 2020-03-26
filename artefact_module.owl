@@ -8,7 +8,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://erlangen-crm.org/artefact">
         <owl:imports rdf:resource="http://erlangen-crm.org/physical-thing"/>
-        <rdfs:comment xml:lang="en">Artefact module extrancted from CIDOC CRM Erlangen release (v.6.2.1)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module about physical man-made entities</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module extracted from CIDOC CRM Erlangen release (v.6.2.1)</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
     
 
