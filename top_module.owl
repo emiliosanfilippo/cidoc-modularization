@@ -71,9 +71,9 @@
     
 
 
-    <!-- http://erlangen-crm.org/upper#QualitySpace -->
+    <!-- http://erlangen-crm.org/upper#QualitativeQualitySpace -->
 
-    <owl:Class rdf:about="http://erlangen-crm.org/upper#QualitySpace">
+    <owl:Class rdf:about="http://erlangen-crm.org/upper#QualitativeQualitySpace">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:comment xml:lang="en">This is a new classes hereby introduced for improving the representation of dimensions. See the Dimension module</rdfs:comment>
     </owl:Class>
@@ -96,7 +96,7 @@
             <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
             <rdf:Description rdf:about="http://erlangen-crm.org/current/E54_Dimension"/>
             <rdf:Description rdf:about="http://erlangen-crm.org/current/E77_Persistent_Item"/>
-            <rdf:Description rdf:about="http://erlangen-crm.org/upper#QualitySpace"/>
+            <rdf:Description rdf:about="http://erlangen-crm.org/upper#QualitativeQualitySpace"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
