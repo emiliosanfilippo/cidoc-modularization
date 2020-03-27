@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://erlangen-crm.org/actor_activities#"
-     xml:base="http://erlangen-crm.org/actor_activities"
+<rdf:RDF xmlns="http://erlangen-crm.org/actor_activity#"
+     xml:base="http://erlangen-crm.org/actor_activity"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,9 +10,9 @@
         <owl:imports rdf:resource="http://erlangen-crm.org/actor"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/temporal-top"/>
         <rdfs:comment xml:lang="en">The Actor Activity module is extracted from CIDOC CRM Erlangen (v.6.2.1)</rdfs:comment>
-        <rdfs:comment xml:lang="en">The purpose of this module is to describe temporal events involving agents in the sense of birth or death events, as well as events concerning the creation or dissolution of groups.
-        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>  
-The module imports the Actor module and the Temporal Entity module, as well as all indirect modules related to the latter ones.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The purpose of this module is to describe temporal events involving agents
+          in the sense of birth or death events, as well as events concerning the creation or dissolution of groups.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Testing status</owl:versionInfo>
     </owl:Ontology>
 
 
