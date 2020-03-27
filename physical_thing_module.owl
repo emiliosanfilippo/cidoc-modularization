@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://erlangen-crm.org/physical-thing">
+        <owl:imports rdf:resource="http://erlangen-crm.org/dimension"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/persistent-item-top"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/place"/>
         <rdfs:comment xml:lang="en">Module about physical things</rdfs:comment>
@@ -264,8 +265,16 @@
     <!-- http://erlangen-crm.org/current/E53_Place -->
 
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place">
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/upper#QualitativeQualitySpace"/>
     </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E54_Dimension -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E54_Dimension"/>
     
 
 
@@ -303,6 +312,12 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/upper#QualitativeQualitySpace -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/upper#QualitativeQualitySpace"/>
     
 
 
