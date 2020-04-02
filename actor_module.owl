@@ -26,6 +26,24 @@
     
 
 
+    <!-- http://dbpedia.org/ontology/created -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/created">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/actor#createdBy"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
+        <rdfs:isDefinedBy xml:lang="en">DBpedia ontology</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">This relation and its inverse can be used to link an actor to the man-made things s/he created. It should be interpreted as a shortcut for data modeling purposes, in particular, to avoid the creation of temporal entities and time span if these are not required</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/actor#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/actor#createdBy"/>
+    
+
+
     <!-- http://erlangen-crm.org/actor#has_current_member -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/actor#has_current_member">
