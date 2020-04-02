@@ -89,7 +89,7 @@
     <!-- http://erlangen-crm.org/current/P54_has_current_permanent_location -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P54_has_current_permanent_location">
-        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/physical-thing#has_current_location"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P54i_is_current_permanent_location_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E19_Physical_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
@@ -100,8 +100,24 @@
     <!-- http://erlangen-crm.org/current/P54i_is_current_permanent_location_of -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P54i_is_current_permanent_location_of">
-        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/physical-thing#is_current_location_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P55_has_current_location -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P55_has_current_location">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P55i_currently_holds"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P55i_currently_holds -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P55i_currently_holds"/>
     
 
 
@@ -140,16 +156,6 @@
     
 
 
-    <!-- http://erlangen-crm.org/physical-thing#has_current_location -->
-
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/physical-thing#has_current_location">
-        <owl:inverseOf rdf:resource="http://erlangen-crm.org/physical-thing#is_current_location_of"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://erlangen-crm.org/physical-thing#has_former_location -->
 
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/physical-thing#has_former_location">
@@ -157,12 +163,6 @@
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://erlangen-crm.org/physical-thing#is_current_location_of -->
-
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/physical-thing#is_current_location_of"/>
     
 
 
@@ -202,7 +202,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://erlangen-crm.org/physical-thing#has_current_location"/>
+                        <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P55_has_current_location"/>
                         <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
                     </owl:Restriction>
                     <owl:Restriction>
