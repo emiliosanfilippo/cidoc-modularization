@@ -18,7 +18,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
+    // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -26,9 +26,13 @@
     
 
 
-    <!-- http://erlangen-crm.org/artefact#test-relation -->
+    <!-- http://dbpedia.org/ontology/date -->
 
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/artefact#test-relation"/>
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/date">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+        <rdfs:comment xml:lang="en">This relation can be used to specify the date when a man-made object was created. It should be interpreted as a modeling shortcut hereby used to facilitate data modeling tasks and to avoid the creation of temporal entities/time spans if not explicitly required</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">DBpedia ontology</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
     
 
 
