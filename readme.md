@@ -16,5 +16,7 @@ Stay tuned for updates.
 
 * **persistent-whole-module.owl**: it imports all ontology modules about persistent items.
 
+* **(work in progress)**
+
 ## Remarks:
 * When using **Protégé**, if direct or indirect imports fail, it is sufficient to import manually the (not-imported) modules.
