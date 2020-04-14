@@ -13,7 +13,7 @@ The reader can refer to the figures in the folder **Diagrams** which graphically
 
 * **cidoc:place-module.owl**: it represents places (*E53 Place*);
 
-* **cidoc:dimension-module.owl**: it represents dimensions (*E54 Dimension*); the new class *Qualitative Quality Space* allows for the representation of dimensions' qualitative values in addition to quantitative values, these latter are represented with OWL data properties.
+* **cidoc:dimension-module.owl**: it represents dimensions (*E54 Dimension*); the new class *Qualitative Quality Space* allows for the representation of dimensions' qualitative values in addition to quantitative values; the latter are represented with OWL data properties.
 
 
 **Modules about persistent items**
