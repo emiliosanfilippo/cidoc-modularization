@@ -18,15 +18,15 @@ The reader can refer to the figures in the folder **Diagrams** which graphically
 
 **Modules about persistent items**
 
-* **cidoc:persistent-item-top-module.owl**: this module covers the most general classes about persistent items; its purpose is to allow for the consistent integration of all modules about persistent items;
+* **cidoc:persistent-item-top-module.owl**, see yellow classes in Fig.1: this module covers the most general classes about persistent items; its purpose is to allow for the consistent integration of all modules about persistent items;
 
-* **cidoc:physical-thing-module.owl**: it represents non-man-made physical things, e.g., *E19 Physical Object* and *E26 Physical Feature*;
+* **cidoc:physical-thing-module.owl**, see green classes in Fig.1: it represents non-man-made physical things, e.g., *E19 Physical Object* and *E26 Physical Feature*;
 
-* **cidoc:artifact-module.owl**: it represents physical man-made entities, e.g., *E22 Man-Made Object*, *E25 Man-Made Feature*, and *E78 Collection*;
+* **cidoc:artifact-module.owl**, see red classes in Fig.1: it represents physical man-made entities, e.g., *E22 Man-Made Object*, *E25 Man-Made Feature*, and *E78 Collection*;
 
-* **cidoc:actor-module.owl**: it represents actors, e.g., *E21 Person* and *E74 Group*;
+* **cidoc:actor-module.owl**, see blue classes in Fig.1: it represents actors, e.g., *E21 Person* and *E74 Group*;
 
-* **cidoc:concept-module.owl**: it represents non-physical conceptual entities, i.e, *E28 Conceptual Object* and all its subclasses; the development of this module requires further work;
+* **cidoc:concept-module.owl**, see violet classes in Fig.1: it represents non-physical conceptual entities, i.e, *E28 Conceptual Object* and all its subclasses; the development of this module requires further work;
 
 
 **Modules about temporal entities**
