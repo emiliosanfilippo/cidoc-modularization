@@ -4,6 +4,8 @@ This repository contains an experimental library of OWL ontologies based on the 
 
 The library of modular ontologies is in the testing phase.
 
+The ontology is presented in:
+
 
 ## Repository overview
 
